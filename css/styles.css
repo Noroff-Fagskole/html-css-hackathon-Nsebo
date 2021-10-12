@@ -1,29 +1,30 @@
 @font-face {
-    font-family: 'Open Sans';
-    src: url('../fonts/Open_Sans/static/OpenSans/OpenSans-Bold.ttf') format ('ttf'),
-    url('../fonts/Open_Sans/static/OpenSans/OpenSans-Light.ttf') format ('ttf');
+  font-family: "Open Sans";
+  src: url("../fonts/Open_Sans/static/OpenSans/OpenSans-Bold.ttf") format
+      ("ttf"),
+    url("../fonts/Open_Sans/static/OpenSans/OpenSans-Light.ttf") format ("ttf");
 }
 
 body {
-background-color: darkturquoise;
- font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 
-'Lucida Sans', Arial, sans-serif;
-color: #444;
-font-weight: normal;
-line-height: 1.4;
+  background-color: lightblue;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: #444;
+  font-weight: normal;
+  line-height: 1.4;
 }
 
 .color-red {
-    color : red ;
+  color: red;
 }
 .color-green {
-    color: green;
+  color: green;
 }
 .color-blue {
-    color: blue;
+  color: blue;
 }
 .color-purple {
-    color:purple
+  color: purple;
 }
 /*
 Mobile : 320px, 
@@ -31,34 +32,34 @@ Tablet: 767px,
 Desktop: 1024px
 */
 main img {
-    width: 100%;
-    max-width: 620px;
+  width: 100%;
+  max-width: 620px;
 
-    margin: 0 auto 0 auto;
-    display: block;
+  margin: 0 auto 0 auto;
+  display: block;
 }
 
 .app-header {
-    min-width: 300px;
-    border-bottom: 1px solid #999;
-    padding-bottom: 1em;
+  min-width: 300px;
+  border-bottom: 1px solid #999;
+  padding-bottom: 1em;
 }
 
-.inner{
-    max-width: 1080px;
-    margin: 0 auto;
+.inner {
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
 .app-logo {
-    display: inline-block;
+  display: inline-block;
 }
 
 .app-logo img {
-    min-width: 160px;
+  min-width: 160px;
 }
 
 .app-navigation {
-    float: right;
+  float: right;
 }
 
 /* 
@@ -66,65 +67,106 @@ links have 4 states....
 a:link, a:visited, a:active, a:hover 
 */
 .app-navigation a:link {
-    text-decoration: none;
-    color: #444;
-    padding: 0.5em
+  text-decoration: none;
+  color: #444;
+  padding: 0.5em;
 }
 
 .app-navigation a:visited {
-    color:#444
+  color: #444;
 }
 
 .app-navigation a:active {
-    color :greenyellow
-}¨
+  color: greenyellow;
+}
+¨ .app-navigation a:hover {
+  color: paleturquoise;
+}
 
-.app-navigation a:hover {
-    color: paleturquoise
+.app-navigation-drawer {
+  /*hide nav on load*/
+  display: block;
+  background: #fff;
+  padding: 0.5em;
+  border-bottom: 2px solid green;
+  list-style: none;
+  /* animate: default state on page load */
+  transition: all 0.4s linear;
+  transform: translateY(-150%);
+}
+
+#hamburger-menu:checked ~ .app-navigation-drawer {
+  /*show nav on :checked */
+  display: block;
+  /* animate into page show state */
+  transform: translateY(0%);
+}
+
+.sr-only {
+  display: none;
+}
+
+#hamburger-menu {
+  /* hide the checkbox */
+  display: none;
+}
+
+/* CSS comment */
+@media screen and (min-width: 767px) {
+  .app-article {
+    display: inline-block;
+    border: 1px solid red;
+    width: 60%;
+  }
+
+  .app-sidebar {
+    display: inline-block;
+    border: 1px solid green;
+    width: 35%;
+    vertical-align: top;
+  }
 }
 
 h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0;
-    font-family: 'Open Sans';
-    font-weight: 100;
+  font-size: 2.5rem;
+  margin-bottom: 0;
+  font-family: "Open Sans";
+  font-weight: 100;
 }
 
-
 p {
-    font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 form {
-    background-color:transparent
+  background-color: transparent;
 }
 
 form fieldset {
-border: 5px dashed lightblue;
-padding: 0.5em 0 1em 1em;
-background-color: white;
+  border: 5px dashed lightblue;
+  padding: 0.5em 0 1em 1em;
+  background-color: white;
 }
 
 form fieldset legend {
-    font-style: italic;
-    font-size: 2em;
+  font-style: italic;
+  font-size: 2em;
 }
-   
 
 form label {
-    display: block;
+  display: block;
 }
 
 form h5 {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .input-text {
-    width: 90%;
-    border: 1px solid black;
-    padding: 0.2em;
-    color: black;
-    border-radius: 6px;
+  width: 90%;
+  border: 1px solid black;
+  padding: 0.2em;
+  color: black;
+  border-radius: 6px;
 }
 
 /*
@@ -133,21 +175,20 @@ textarea {
 }*/
 
 .input-text-area {
-    border-radius: 6px;
+  border-radius: 6px;
 }
 
-input[type='submit'] {
-    background-color: grey;
-    width: 100%;
-    border: none;
-    cursor: pointer;
-    padding: 0.5em;
+input[type="submit"] {
+  background-color: grey;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  padding: 0.5em;
 }
 
-input[type='submit']:hover {
-    background-color: pink;
+input[type="submit"]:hover {
+  background-color: pink;
 }
-
 
 /*
 input[type='text'] {
